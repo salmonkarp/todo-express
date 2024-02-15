@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Todo List">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Todo app</title>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js" integrity="sha512-TelkP3PCMJv+viMWynjKcvLsQzx6dJHvIGhfqzFtZKgAjKM1YPqcwzzDEoTc/BHjf43PcPzTQOjuTr4YdE8lNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body >
+  <div class="bg">
+    <div class="bg-image"></div>
+  </div>
+  <div class="wrapper">
+    <div class="title-wrapper">
+      <h1 class="title">TODO</h1>
+      <button class="theme-selector" onclick="changeTheme(this)" aria-label="Change Theme"><img src="./images/icon-sun.svg" frameborder="0" class="theme-icon" alt="theme-icon"></img></button>
+    </div>
+    <div class="new-todo-wrapper">
+      <div class="custom-checkbox" id="new-todo-button">
+        <img src="./images/icon-check.svg" alt="Check">
+      </div>
+      <input type="search" name="new-todo-input" id="new-todo-input" placeholder="Create new todo...">
+    </div>
+    <ul class="old-todo-wrapper">
+      <div class="footer">
+        <div class="items-left">0 items left</div>
+        <div class="selector">
+          <div class="selector-option active" onclick="setView(this,'all')">All</div>
+          <div class="selector-option" onclick="setView(this,'active')">Active</div>
+          <div class="selector-option" onclick="setView(this,'completed')">Completed</div>
+        </div>
+        <div class="clear-completed" onclick="clearCompleted()">Clear Completed</div>
+      </div>
+      
+    </ul>
+    <div class="outside-container"></div>
+    <div class="instruction">Drag and drop to reorder list</div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js" integrity="sha512-TelkP3PCMJv+viMWynjKcvLsQzx6dJHvIGhfqzFtZKgAjKM1YPqcwzzDEoTc/BHjf43PcPzTQOjuTr4YdE8lNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./javascripts/script.js" defer></script>
+</html>
